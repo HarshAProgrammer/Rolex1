@@ -57,7 +57,8 @@
             android:launchMode="singleTop" />
         <service
             android:name=".activities.ExpensiveNotificationService"
-            android:permission="com.google.android.c2dm.permission.SEND">
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECIEVE" />
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -65,7 +66,8 @@
         </service>
         <service
             android:name=".blog.BlogNotificationService"
-            android:permission="com.google.android.c2dm.permission.SEND">
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECIEVE" />
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -73,7 +75,8 @@
         </service>
         <service
             android:name=".video.VideoNotificationService"
-            android:permission="com.google.android.c2dm.permission.SEND">
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECIEVE" />
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -81,7 +84,8 @@
         </service>
         <service
             android:name=".activities.DailyNotificationService"
-            android:permission="com.google.android.c2dm.permission.SEND">
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECIEVE" />
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -104,7 +108,8 @@
 
         <activity android:name=".activities.FavouriteCategoriesActivity" />
         <activity android:name=".activities.IntroActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -173,7 +178,8 @@
             </intent-filter>
         </activity>
 
-        <receiver android:name=".activities.AppWidgetProvider">
+        <receiver android:name=".activities.AppWidgetProvider"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -359,7 +365,8 @@
             android:label="@string/account_saved_thing_activity_label"
             android:parentActivityName=".reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
-        <activity android:name=".reddit.activities.ShareDataResolverActivity">
+        <activity android:name=".reddit.activities.ShareDataResolverActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
 
@@ -417,7 +424,8 @@
             android:label="@string/search_subreddits_activity_label"
             android:parentActivityName=".reddit.activities.RedditMainActivity"
             android:theme="@style/AppThemeReddit.Slidable" />
-        <activity android:name=".reddit.activities.RedditLinkResolverActivity">
+        <activity android:name=".reddit.activities.RedditLinkResolverActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
